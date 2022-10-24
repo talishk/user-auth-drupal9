@@ -1,0 +1,20 @@
+uuid: 72220ac5-9bd8-4596-9fd4-e0b4773fb2bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_auth_token
+  module:
+    - user
+id: user.user.field_auth_token
+field_name: field_auth_token
+entity_type: user
+bundle: user
+label: 'Auth Token'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

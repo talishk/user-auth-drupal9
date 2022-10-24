@@ -1,0 +1,21 @@
+uuid: f45952e6-f654-490a-8594-8a0cdfd7d57c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_auth_token
+field_name: field_auth_token
+entity_type: user
+type: string
+settings:
+  max_length: 32
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

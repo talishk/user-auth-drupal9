@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Nasdaq install file for hook updates and schema if any.
+ */
+
+/**
+ * Implements hook_install() for generating auth token for existing users.
+ */
+function nasdaq_user_install() {
+  // Get all the users.
+  $uids = \Drupal::entityQuery('user')->execute();
+
+  // Generate auth token for existing users.
+  foreach ($uids as $uid) {
+    if ($uid != 0) {
+      \Drupal::service('nasdaq_user.auth_token_service')->generateAuthToken($uid);
+    }
+  }
+}

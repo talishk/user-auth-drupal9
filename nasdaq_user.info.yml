@@ -1,0 +1,5 @@
+name: 'Nasdaq User Auth Token'
+type: module
+description: 'Allows authentication of user based on the auth token of the user.'
+package: Nasdaq Custom
+core_version_requirement: ^9.3

@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Allows nasdaq user to have auth tokens.
+ */
+
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_entity_type_presave to generate auth token for the user.
+ *
+ * @param \Drupal\user\UserInterface $account
+ *
+ * @return void
+ */
+function nasdaq_user_user_insert(UserInterface $account) {
+  // Generate auth token when user is created.
+  \Drupal::service('nasdaq_user.auth_token_service')->generateAuthToken($account->id());
+}
